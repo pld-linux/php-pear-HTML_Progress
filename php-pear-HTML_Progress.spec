@@ -6,12 +6,12 @@
 Summary:	%{_pearname} How to include a loading bar in your XHTML documents quickly and easily
 Summary(pl):	%{_pearname} Jak szybko i ³atwo do³±czyæ pasek postêpu w dokumentach XHTML
 Name:		php-pear-%{_pearname}
-Version:	0.6.0
+Version:	0.6.1
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	9cb056fda9df4e89df3fb3fe5eb1095c
+# Source0-md5:	aaac6ee8a5da545e48d29e285aec467b
 URL:		http://pear.php.net/package/%{_pearname}/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -31,6 +31,11 @@ Features:
 - set/add and returns value of current status of progress
 - compliant with all CSS/XHTML standards
 - integration with template engine ITx family is possible
+- create horizontal and also vertical bart
+- optional message line come with progress status
+- percent info is floating all around the progress bar
+- scale can be changed (default is 100)
+- legend of percent text info can be changed (default is "%")
 
 This class has in PEAR status: %{_status}.
 
@@ -48,6 +53,11 @@ Cechy:
 - ustawianie/dodawanie oraz zwracanie biê¿acej informacji o postêpie
 - kompatybilny ze wszystkimi standardami CSS/XHTML
 - mo¿liwa integracja z rodzin± szablonów ITx
+- tworzenie poziomych oraz pionowych pasków postêpu
+- opcjonalna linia z komunikatem w statusie postêpu
+- procentowa informacja "p³ywa" dooko³a paska postêpu
+- skala mo¿e byæ zmieniona (domy¶lnie 100)
+- legenda procentowej informacji tekstowej mo¿e byæ zmieniona (domy¶lnie "%")
 
 Ta klasa ma w PEAR status: %{_status}.
 
@@ -56,14 +66,16 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
 
 install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install %{_pearname}-%{version}/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/{ChangeLog,docs,examples,INSTALL,LICENSE,README,Release-0.4.2,Release-0.4.1}
+%doc %{_pearname}-%{version}/{ChangeLog,docs,examples,INSTALL,LICENSE,README,Release-*,tests}
 %{php_pear_dir}/%{_class}/*.php
+%{php_pear_dir}/%{_class}/%{_subclass}
