@@ -6,12 +6,12 @@
 Summary:	%{_pearname} How to include a loading bar in your XHTML documents quickly and easily
 Summary(pl):	%{_pearname} Jak szybko i ³atwo do³±czyæ pasek postêpu w dokumentach XHTML
 Name:		php-pear-%{_pearname}
-Version:	0.5.0
+Version:	0.6.0
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	bc9e6f51291bd4e81402c2a977705e2f
+# Source0-md5:	9cb056fda9df4e89df3fb3fe5eb1095c
 URL:		http://pear.php.net/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
