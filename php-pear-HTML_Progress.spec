@@ -3,8 +3,8 @@
 %define         _subclass       Progress
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
-Summary:	%{_pearname} How to include a loading bar in your XHTML documents quickly and easily
-Summary(pl):	%{_pearname} Jak szybko i ³atwo do³±czyæ pasek postêpu w dokumentach XHTML
+Summary:	%{_pearname} - including a loading bar in your XHTML documents quickly and easily
+Summary(pl):	%{_pearname} - szybkie i ³atwe do³±czanie paska postêpu w dokumentach XHTML
 Name:		php-pear-%{_pearname}
 Version:	0.6.1
 Release:	1
@@ -41,7 +41,7 @@ This class has in PEAR status: %{_status}.
 
 %description -l pl
 Za pomoc± tego pakietu mo¿na w ³atwy sposób dodaæ w pe³ni
-konfigurowywalny pasek postêpu w ju¿ istniej±cych dokumentach XHTML.
+konfigurowalny pasek postêpu w ju¿ istniej±cych dokumentach XHTML.
 
 Przegl±darka powinna akcpetowaæ DHTML.
 
@@ -50,14 +50,15 @@ Cechy:
   rozmiaru i koloru
 - mo¿liwo¶æ zmiany kolorów i rozmiarów poszczególnych elementów
 - pokazanie lub ukrycie tekstowej informacji o postêpie
-- ustawianie/dodawanie oraz zwracanie biê¿acej informacji o postêpie
+- ustawianie/dodawanie oraz zwracanie bie¿±cej informacji o postêpie
 - kompatybilny ze wszystkimi standardami CSS/XHTML
 - mo¿liwa integracja z rodzin± szablonów ITx
 - tworzenie poziomych oraz pionowych pasków postêpu
 - opcjonalna linia z komunikatem w statusie postêpu
 - procentowa informacja "p³ywa" dooko³a paska postêpu
 - skala mo¿e byæ zmieniona (domy¶lnie 100)
-- legenda procentowej informacji tekstowej mo¿e byæ zmieniona (domy¶lnie "%")
+- legenda procentowej informacji tekstowej mo¿e byæ zmieniona
+  (domy¶lnie "%")
 
 Ta klasa ma w PEAR status: %{_status}.
 
