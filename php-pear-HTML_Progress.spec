@@ -45,7 +45,7 @@ In PEAR status of this package is: %{_status}.
 Za pomoc± tego pakietu mo¿na w ³atwy sposób dodaæ w pe³ni
 konfigurowalny pasek postêpu w ju¿ istniej±cych dokumentach XHTML.
 
-Przegl±darka powinna akcpetowaæ DHTML.
+Przegl±darka powinna akceptowaæ DHTML.
 
 Cechy:
 - mo¿liwo¶æ u¿ywania ju¿ istniej±cych arkuszy CSS w celu okre¶lenia
