@@ -7,12 +7,12 @@
 Summary:	%{_pearname} - including a loading bar in your XHTML documents quickly and easily
 Summary(pl):	%{_pearname} - szybkie i ³atwe do³±czanie paska postêpu w dokumentach XHTML
 Name:		php-pear-%{_pearname}
-Version:	1.0
+Version:	1.1
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	d631efa86fa35764f37295702025c6c0
+# Source0-md5:	fdec29cbace172a2b4e7e0de256229b7
 URL:		http://pear.php.net/package/HTML_Progress/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -70,10 +70,9 @@ Ta klasa ma w PEAR status: %{_status}.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Error/Raise
 
-install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
 install %{_pearname}-%{version}/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
-install %{_pearname}-%{version}/%{_subclass}/Error/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Error
-install %{_pearname}-%{version}/%{_subclass}/Error/Raise/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Error/Raise
+install %{_pearname}-%{version}/Error/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Error
+install %{_pearname}-%{version}/Error/Raise/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Error/Raise
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -81,5 +80,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc %{_pearname}-%{version}/{ChangeLog,examples,INSTALL,LICENSE,README,Release-*,tests,tutorials}
-%{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}
