@@ -38,7 +38,7 @@ Features:
 - scale can be changed (default is 100)
 - legend of percent text info can be changed (default is "%")
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 Za pomoc± tego pakietu mo¿na w ³atwy sposób dodaæ w pe³ni
