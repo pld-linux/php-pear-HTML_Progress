@@ -7,18 +7,20 @@
 Summary:	%{_pearname} - including a loading bar in your XHTML documents quickly and easily
 Summary(pl):	%{_pearname} - szybkie i ³atwe do³±czanie paska postêpu w dokumentach XHTML
 Name:		php-pear-%{_pearname}
-Version:	1.2.0
-%define _extraver RC3
-Release:	0.%{_extraver}
+Version:	1.2.2
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_extraver}.tgz
-# Source0-md5:	080a54de2f879f59c83bcc8df7ffb457
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+# Source0-md5:	8a4a0193caed6f56067166bb991e6225
 URL:		http://pear.php.net/package/HTML_Progress/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
+Requires:	Smarty
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_noautoreq	'pear(Smarty.class.php)'
 
 %description
 This package provides a way to add a loading bar fully costomizable in
@@ -71,13 +73,15 @@ Ta klasa ma w PEAR status: %{_status}.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/generator
 
-install %{_pearname}-%{version}%{_extraver}/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
-install %{_pearname}-%{version}%{_extraver}/%{_subclass}/generator/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/generator
+install %{_pearname}-%{version}/%{_subclass}.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install %{_pearname}-%{version}/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
+install %{_pearname}-%{version}/%{_subclass}/generator/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/generator
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}%{_extraver}/{ChangeLog,examples,HISTORY,INSTALL,LICENSE,README,Release-*,tests,tutorials}
+%doc %{_pearname}-%{version}/{ChangeLog,examples,HISTORY,INSTALL,LICENSE,README,Release-*,tests,tutorials}
+%{php_pear_dir}/%{_class}/%{_subclass}.php
 %{php_pear_dir}/%{_class}/%{_subclass}
