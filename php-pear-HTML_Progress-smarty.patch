@@ -1,0 +1,12 @@
+--- HTML_Progress-1.2.5/usr/share/pear/HTML/Progress/generator/SmartyDynamic.php	2006-01-26 01:09:41.000000000 +0200
++++ /usr/share/pear/HTML/Progress/generator/SmartyDynamic.php	2006-01-26 01:09:26.000000000 +0200
+@@ -22,8 +22,7 @@
+  */
+ 
+ require_once 'HTML/QuickForm/Renderer/Array.php';
+-// fix this if your Smarty is somewhere else
+-require_once 'Smarty.class.php';
++require_once '/usr/share/php/Smarty/Smarty.class.php';
+ 
+ /**
+  * The ActionDisplay class provides a dynamic form rendering
