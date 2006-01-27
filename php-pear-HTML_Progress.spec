@@ -25,7 +25,7 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # exclude Smarty and optional dependencies and tests (HTML_TestListener.php, TestUnit.php)
-%define		_noautoreq	'pear(Smarty.class.php)' 'pear(PEAR.*)' 'pear(HTML/QuickForm.*)' 'pear(HTML/QuickForm/Controller.*)' 'pear(Image/Color.*)' 'pear(HTML/Page2.*)' 'pear(HTML/Template/IT.*)' 'pear(HTML/Template/Sigma.*)' 'pear(Log.*)' 'pear(Config.*)' 'pear(HTML_TestListener.php)' 'pear(TestUnit.php)'
+%define		_noautoreq	'pear(.*Smarty.class.php)' 'pear(PEAR.*)' 'pear(HTML/QuickForm.*)' 'pear(HTML/QuickForm/Controller.*)' 'pear(Image/Color.*)' 'pear(HTML/Page2.*)' 'pear(HTML/Template/IT.*)' 'pear(HTML/Template/Sigma.*)' 'pear(Log.*)' 'pear(Config.*)' 'pear(HTML_TestListener.php)' 'pear(TestUnit.php)'
 
 %description
 This package provides a way to add a loading bar fully costomizable in
