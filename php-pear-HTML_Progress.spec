@@ -20,7 +20,7 @@ BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-common >= 3:4.2.0
 Requires:	php-pear
 Requires:	php-pear-HTML_Common >= 1.2.1
-Requires:	Smarty
+Requires:	Smarty >= 2.6.10-4
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
