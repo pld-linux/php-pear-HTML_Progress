@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - including a loading bar in your XHTML documents quickly and easily
-Summary(pl):	%{_pearname} - szybkie i ³atwe do³±czanie paska postêpu w dokumentach XHTML
+Summary(pl.UTF-8):   %{_pearname} - szybkie i Å‚atwe doÅ‚Ä…czanie paska postÄ™pu w dokumentach XHTML
 Name:		php-pear-%{_pearname}
 Version:	1.2.5
 Release:	3
@@ -50,32 +50,32 @@ Features:
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Za pomoc± tego pakietu mo¿na w ³atwy sposób dodaæ w pe³ni
-konfigurowalny pasek postêpu w ju¿ istniej±cych dokumentach XHTML.
+%description -l pl.UTF-8
+Za pomocÄ… tego pakietu moÅ¼na w Å‚atwy sposÃ³b dodaÄ‡ w peÅ‚ni
+konfigurowalny pasek postÄ™pu w juÅ¼ istniejÄ…cych dokumentach XHTML.
 
-Przegl±darka powinna akceptowaæ DHTML.
+PrzeglÄ…darka powinna akceptowaÄ‡ DHTML.
 
 Cechy:
-- mo¿liwo¶æ u¿ywania ju¿ istniej±cych arkuszy CSS w celu okre¶lenia
+- moÅ¼liwoÅ›Ä‡ uÅ¼ywania juÅ¼ istniejÄ…cych arkuszy CSS w celu okreÅ›lenia
   rozmiaru i koloru
-- mo¿liwo¶æ zmiany kolorów i rozmiarów poszczególnych elementów
-- pokazanie lub ukrycie tekstowej informacji o postêpie
-- ustawianie/dodawanie oraz zwracanie bie¿±cej informacji o postêpie
+- moÅ¼liwoÅ›Ä‡ zmiany kolorÃ³w i rozmiarÃ³w poszczegÃ³lnych elementÃ³w
+- pokazanie lub ukrycie tekstowej informacji o postÄ™pie
+- ustawianie/dodawanie oraz zwracanie bieÅ¼Ä…cej informacji o postÄ™pie
 - kompatybilny ze wszystkimi standardami CSS/XHTML
-- mo¿liwa integracja z rodzin± szablonów ITx
-- tworzenie poziomych oraz pionowych pasków postêpu
-- opcjonalna linia z komunikatem w statusie postêpu
-- procentowa informacja "p³ywa" dooko³a paska postêpu
-- skala mo¿e byæ zmieniona (domy¶lnie 100)
-- legenda procentowej informacji tekstowej mo¿e byæ zmieniona
-  (domy¶lnie "%%")
+- moÅ¼liwa integracja z rodzinÄ… szablonÃ³w ITx
+- tworzenie poziomych oraz pionowych paskÃ³w postÄ™pu
+- opcjonalna linia z komunikatem w statusie postÄ™pu
+- procentowa informacja "pÅ‚ywa" dookoÅ‚a paska postÄ™pu
+- skala moÅ¼e byÄ‡ zmieniona (domyÅ›lnie 100)
+- legenda procentowej informacji tekstowej moÅ¼e byÄ‡ zmieniona
+  (domyÅ›lnie "%%")
 
 Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoReq:	no
@@ -84,7 +84,7 @@ AutoProv:	no
 %description tests
 Tests for PEAR::%{_pearname}.
 
-%description tests -l pl
+%description tests -l pl.UTF-8
 Testy dla PEAR::%{_pearname}.
 
 %prep
