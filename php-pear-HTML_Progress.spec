@@ -3,26 +3,34 @@
 %define		_subclass	Progress
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
-
 Summary:	%{_pearname} - including a loading bar in your XHTML documents quickly and easily
 Summary(pl.UTF-8):	%{_pearname} - szybkie i łatwe dołączanie paska postępu w dokumentach XHTML
 Name:		php-pear-%{_pearname}
 Version:	1.2.6
-Release:	1
-Epoch:		0
+Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	08a80dadde1edb1e45ea44aa207d5a0a
 Patch0:		%{name}-smarty.patch
 URL:		http://pear.php.net/package/HTML_Progress/
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
+Requires:	Smarty >= 2.6.10-4
 Requires:	php-common >= 3:4.2.0
 Requires:	php-pear
 Requires:	php-pear-HTML_Common >= 1.2.1
-Requires:	Smarty >= 2.6.10-4
+Suggests:	php-gd
+Suggests:	php-pear-Config
+Suggests:	php-pear-HTML_Page2
+Suggests:	php-pear-HTML_QuickForm
+Suggests:	php-pear-HTML_QuickForm_Controller
+Suggests:	php-pear-HTML_Template_IT
+Suggests:	php-pear-HTML_Template_Sigma
+Suggests:	php-pear-Image_Color
+Suggests:	php-pear-Log
+Suggests:	php-pear-PEAR
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -77,9 +85,9 @@ Ta klasa ma w PEAR status: %{_status}.
 Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
-Requires:	%{name} = %{epoch}:%{version}-%{release}
-AutoReq:	no
+Requires:	%{name} = %{version}-%{release}
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
