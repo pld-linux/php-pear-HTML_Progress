@@ -1,13 +1,11 @@
-%include	/usr/lib/rpm/macros.php
-%define		_class		HTML
-%define		_subclass	Progress
 %define		_status		stable
-%define		_pearname	%{_class}_%{_subclass}
+%define		_pearname	HTML_Progress
+%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - including a loading bar in your XHTML documents quickly and easily
 Summary(pl.UTF-8):	%{_pearname} - szybkie i łatwe dołączanie paska postępu w dokumentach XHTML
 Name:		php-pear-%{_pearname}
 Version:	1.2.6
-Release:	3
+Release:	4
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -18,7 +16,7 @@ BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	Smarty >= 2.6.10-4
-Requires:	php-common >= 3:4.2.0
+Requires:	php(core) >= 4.2.0
 Requires:	php-pear
 Requires:	php-pear-HTML_Common >= 1.2.1
 Suggests:	php-gd
@@ -104,5 +102,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc install.log optional-packages.txt
 %doc docs/%{_pearname}/{ChangeLog,examples,HISTORY,INSTALL,LICENSE,README,Release-*,docs}
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/%{_subclass}.php
-%{php_pear_dir}/%{_class}/%{_subclass}
+%{php_pear_dir}/HTML/Progress.php
+%{php_pear_dir}/HTML/Progress
