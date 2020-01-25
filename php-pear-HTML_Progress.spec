@@ -1,6 +1,5 @@
 %define		_status		stable
 %define		_pearname	HTML_Progress
-%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - including a loading bar in your XHTML documents quickly and easily
 Summary(pl.UTF-8):	%{_pearname} - szybkie i łatwe dołączanie paska postępu w dokumentach XHTML
 Name:		php-pear-%{_pearname}
