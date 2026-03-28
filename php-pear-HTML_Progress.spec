@@ -28,7 +28,7 @@ Suggests:	php-pear-HTML_Template_Sigma
 Suggests:	php-pear-Image_Color
 Suggests:	php-pear-Log
 Suggests:	php-pear-PEAR
-Obsoletes:	php-pear-HTML_Progress-tests
+Obsoletes:	php-pear-HTML_Progress-tests < 1.2.6-3
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
