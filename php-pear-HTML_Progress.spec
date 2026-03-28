@@ -13,7 +13,7 @@ Patch0:		%{name}-smarty.patch
 URL:		http://pear.php.net/package/HTML_Progress/
 BuildRequires:	php-pear-PEAR >= 1:1.5.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 1.745
 Requires:	Smarty >= 2.6.10-4
 Requires:	php(core) >= 4.2.0
 Requires:	php-pear
